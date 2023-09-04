@@ -126,7 +126,7 @@ dependencies {
 
   implementation ("org.jolokia:jolokia-core:$jolokiaVersion")
   implementation ("org.jolokia:jolokia-jsr160:$jolokiaVersion")
-  implementation ("org.eclipse.jetty.aggregate:jetty-all:9.4.51.v20230217")
+  implementation ("org.eclipse.jetty.aggregate:jetty-all:9.4.52.v20230823")
 
   annotationProcessor ("com.adaptris:interlok-core-apt:$interlokCoreVersion")
   umlDoclet("nl.talsmasoftware:umldoclet:2.1.0")
