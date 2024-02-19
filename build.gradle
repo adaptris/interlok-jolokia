@@ -129,7 +129,7 @@ dependencies {
   implementation ("org.eclipse.jetty.aggregate:jetty-all:9.4.53.v20231009")
 
   annotationProcessor ("com.adaptris:interlok-core-apt:$interlokCoreVersion")
-  umlDoclet("nl.talsmasoftware:umldoclet:2.1.1")
+  umlDoclet("nl.talsmasoftware:umldoclet:2.1.2")
 
   testImplementation ('junit:junit:4.13.2')
   testImplementation ("org.slf4j:slf4j-simple:$slf4jVersion")
