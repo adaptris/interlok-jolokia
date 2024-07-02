@@ -2,9 +2,9 @@ plugins {
   id "java-library"
   id "maven-publish"
   id "jacoco"
-  id "com.github.spotbugs" version "6.0.6"
+  id "com.github.spotbugs" version "6.0.14"
   id "org.sonarqube" version "4.4.1.3373"
-  id "org.owasp.dependencycheck" version "9.0.8"
+  id "org.owasp.dependencycheck" version "9.0.10"
 }
 
 ext {
@@ -29,11 +29,11 @@ ext {
 
   organizationName = "Adaptris Ltd"
   organizationUrl = "http://interlok.adaptris.net"
-  slf4jVersion="2.0.11"
+  slf4jVersion="2.0.13"
   log4j2Version = "2.14.1"
   mockitoVersion = "5.2.0"
   jolokiaVersion = "1.7.2"
-  jettyVersion = "10.0.19"
+  jettyVersion = "10.0.20"
 }
 
 ext.gitBranchNameOrTimestamp = { branchName ->
@@ -139,13 +139,13 @@ dependencies {
   annotationProcessor ("com.adaptris:interlok-core-apt:$interlokCoreVersion")
   umlDoclet("nl.talsmasoftware:umldoclet:2.1.0")
 
-  testImplementation ("org.junit.jupiter:junit-jupiter-engine:5.10.1")
+  testImplementation ("org.junit.jupiter:junit-jupiter-engine:5.10.2")
   testImplementation ("org.slf4j:slf4j-simple:$slf4jVersion")
   testImplementation ("com.adaptris:interlok-stubs:$interlokCoreVersion") { changing= true }
   testImplementation ("org.mockito:mockito-core:$mockitoVersion")
   testImplementation ("org.mockito:mockito-inline:$mockitoVersion")
 
-  testImplementation ("org.awaitility:awaitility:4.2.0")
+  testImplementation ("org.awaitility:awaitility:4.2.1")
 
   javadoc("com.adaptris:interlok-core-apt:$interlokCoreVersion")
   offlineJavadocPackages ("com.adaptris:interlok-core:$interlokCoreVersion:javadoc@jar")
