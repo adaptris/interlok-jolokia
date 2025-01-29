@@ -32,8 +32,8 @@ ext {
   slf4jVersion="2.0.16"
   log4j2Version = "2.14.1"
   mockitoVersion = "5.2.0"
-  jolokiaVersion = "1.7.2"
-  jettyVersion = "10.0.20"
+  jolokiaVersion = "2.2.1"
+  jettyVersion = "11.0.24"
 }
 
 ext.gitBranchNameOrTimestamp = { branchName ->
@@ -133,8 +133,8 @@ dependencies {
   api ("com.adaptris:interlok-core:$interlokCoreVersion")
   api ("com.adaptris:interlok-common:$interlokCoreVersion")
 
-  implementation ("org.jolokia:jolokia-core:$jolokiaVersion")
-  implementation ("org.jolokia:jolokia-jsr160:$jolokiaVersion")
+  implementation ("org.jolokia:jolokia-server-core:$jolokiaVersion")
+  implementation ("org.jolokia:jolokia-service-jsr160:$jolokiaVersion")
   
   annotationProcessor ("com.adaptris:interlok-core-apt:$interlokCoreVersion")
   umlDoclet("nl.talsmasoftware:umldoclet:2.1.0")
