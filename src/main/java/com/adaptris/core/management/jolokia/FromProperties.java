@@ -36,6 +36,7 @@ import org.eclipse.jetty.servlet.ServletHolder;
 import org.eclipse.jetty.util.security.Constraint;
 import org.eclipse.jetty.util.thread.QueuedThreadPool;
 import org.eclipse.jetty.util.thread.ThreadPool;
+import org.jolokia.server.core.http.AgentServlet;
 
 /**
  * Build a jetty server from properties.
@@ -119,7 +120,7 @@ final class FromProperties extends ServerBuilder {
   }
 
   private ServletHolder jolokiaServlet() {
-    ServletHolder servletHolder = new ServletHolder("jolokia-agent", org.jolokia.http.AgentServlet.class);
+    ServletHolder servletHolder = new ServletHolder("jolokia-agent", AgentServlet.class);
 
     /*
      * Debugging state after startup. Can be changed via the Config MBean during runtime. Default false
