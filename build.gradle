@@ -33,7 +33,7 @@ ext {
   log4j2Version = "2.14.1"
   mockitoVersion = "5.2.0"
   jolokiaVersion = "1.7.2"
-  jettyVersion = "10.0.20"
+  jettyVersion = "10.0.26"
 }
 
 ext.gitBranchNameOrTimestamp = { branchName ->
@@ -285,6 +285,11 @@ dependencyCheck  {
   }
   analyzers {
     assemblyEnabled=false
+	ossIndex {
+	  username = System.getenv("OSS_INDEX_USERNAME")
+	  password = System.getenv("OSS_INDEX_PASSWORD")
+  	  warnOnlyOnRemoteErrors = true
+    }
   }
 }
 
