@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suppressions xmlns="https://jeremylong.github.io/DependencyCheck/dependency-suppression.1.3.xsd">
+  <suppress>
+    <notes><![CDATA[
+      CVE-2026-84218 affects the JSR-160 proxy in Jolokia 1.x. Jolokia's upstream issue
+      confirms the affected range includes all 1.x versions from 1.5.0 onward and fixes it in
+      2.6.2 by requiring explicit proxy target allowlisting. The fix is a major-version upgrade
+      with a behavior/configuration change, so it is deferred to the dependency-modernization
+      effort. This suppression is a temporary exception, not remediation.
+      Follow-up: https://github.com/jolokia/jolokia/issues/1049
+    ]]></notes>
+    <packageUrl>pkg:maven/org.jolokia/jolokia-core@1.7.2</packageUrl>
+    <cve>CVE-2026-84218</cve>
+  </suppress>
+</suppressions>
